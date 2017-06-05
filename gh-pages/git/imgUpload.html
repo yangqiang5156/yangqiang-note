@@ -1,0 +1,456 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1.简单的图片上传预览 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="shiling.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="learnJavascripts.html">
+            
+                <a href="learnJavascripts.html">
+            
+                    
+                    一、Javascripts学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="basicKnowledge.html">
+            
+                <a href="basicKnowledge.html">
+            
+                    
+                    javascript基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="bootstrap.html">
+            
+                <a href="bootstrap.html">
+            
+                    
+                    二、bootstrap常用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="bsModal.html">
+            
+                <a href="bsModal.html">
+            
+                    
+                    1.bootsrap Modal模态框常用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="shiling.html">
+            
+                <a href="shiling.html">
+            
+                    
+                    三、前端开发常用拾零
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="imgUpload.html">
+            
+                <a href="imgUpload.html">
+            
+                    
+                    1.简单的图片上传预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1.简单的图片上传预览</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;">&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;</h3>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ie=edge&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>h5&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x5904;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-class">.images</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">30px</span>;
+            <span class="hljs-attribute">background-color</span>: orange;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;images&quot;</span>&gt;</span>&#x70B9;&#x51FB;&#x4E0A;&#x4F20;&#x56FE;&#x7247;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;finalIMG&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border:1px solid orange;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> imgElem = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.images&quot;</span>);
+            <span class="hljs-keyword">var</span> fileElem = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;input&apos;</span>);
+            fileElem.type = <span class="hljs-string">&apos;file&apos;</span>;
+
+            imgElem.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                fileElem.click();
+            });
+
+            fileElem.addEventListener(<span class="hljs-string">&apos;change&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">var</span> file = <span class="hljs-keyword">this</span>.files[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
+                <span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;canvas&quot;</span>);
+                <span class="hljs-keyword">var</span> ctx = canvas.getContext(<span class="hljs-string">&quot;2d&quot;</span>);
+                img.src = <span class="hljs-built_in">window</span>.URL.createObjectURL(file);
+                img.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">var</span> MAX_WIDTH = <span class="hljs-number">400</span>;
+                    <span class="hljs-keyword">var</span> MAX_HEIGHT = <span class="hljs-number">300</span>;
+                    <span class="hljs-keyword">var</span> width = img.width;
+                    <span class="hljs-keyword">var</span> height = img.height;
+                    <span class="hljs-comment">//&#x7B49;&#x6BD4;&#x4F8B;&#x7F29;&#x653E;&#x5236;&#x4F5C;&#x7F29;&#x7565;&#x56FE;</span>
+                    <span class="hljs-keyword">if</span> (width &gt; height) {
+                        <span class="hljs-keyword">if</span> (width &gt; MAX_WIDTH) {
+                            height *= MAX_WIDTH / width;
+                            width = MAX_WIDTH;
+                        }
+                    } <span class="hljs-keyword">else</span> {
+                        <span class="hljs-keyword">if</span> (height &gt; MAX_HEIGHT) {
+                            width *= MAX_HEIGHT / height;
+                            height = MAX_HEIGHT;
+                        }
+                    }
+                    canvas.width = width;
+                    canvas.height = height;
+                    <span class="hljs-keyword">var</span> ctx = canvas.getContext(<span class="hljs-string">&quot;2d&quot;</span>);
+                    ctx.drawImage(img, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, width, height);
+                    <span class="hljs-keyword">var</span> finalURL = canvas.toDataURL(); <span class="hljs-comment">//base64</span>
+                    <span class="hljs-keyword">var</span> imgshow = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;.finalIMG&quot;</span>);
+                    imgshow.setAttribute(<span class="hljs-string">&apos;src&apos;</span>, finalURL)
+
+                    <span class="hljs-comment">//&#x4E0A;&#x4F20;&#x7F29;&#x7565;&#x56FE;</span>
+                    <span class="hljs-comment">// canvas.toBlob(function(blob) {</span>
+                    <span class="hljs-comment">//     var form = new FormData();</span>
+                    <span class="hljs-comment">//     form.append(&apos;file&apos;, blob);</span>
+                    <span class="hljs-comment">//     fetch(&apos;/api/upload&apos;, {</span>
+                    <span class="hljs-comment">//         method: &apos;POST&apos;,</span>
+                    <span class="hljs-comment">//         body: form</span>
+                    <span class="hljs-comment">//     });</span>
+                    <span class="hljs-comment">// });</span>
+                }
+            });
+        }
+
+
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"> <span class="hljs-comment">//&#x9884;&#x89C8;&#x56FE;&#x7247;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;</span>
+        <span class="hljs-comment">//1.&#x65B9;&#x5F0F;&#x4E00;</span>
+        <span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;img&apos;</span>);
+        img.src = <span class="hljs-built_in">window</span>.URL.createObjectURL(file);
+
+        <span class="hljs-comment">//2.&#x65B9;&#x5F0F;&#x4E8C;</span>
+        <span class="hljs-keyword">var</span> img = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
+        <span class="hljs-keyword">var</span> reader = <span class="hljs-keyword">new</span> FileReader();
+        reader.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+            img.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+
+
+        <span class="hljs-comment">//&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x9884;&#x89C8;</span>
+        <span class="hljs-comment">//dom&#x7ED3;&#x6784;</span>
+        <span class="hljs-comment">//&lt;div&gt;</span>
+        <span class="hljs-comment">//    &lt;input id=&quot;file_1&quot; type=&quot;file&quot; onchange=&quot;showPic(this,&apos;pic&apos;)&quot;&gt;</span>
+       <span class="hljs-comment">//     &lt;img src=&quot;&quot; id=&quot;pic&quot;&gt;</span>
+       <span class="hljs-comment">// &lt;/div&gt;</span>
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFullPath</span>(<span class="hljs-params">obj, imgId</span>) </span>{
+            <span class="hljs-keyword">if</span> (obj) {
+                <span class="hljs-comment">//Internet Explorer</span>
+                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.navigator.userAgent.indexOf(<span class="hljs-string">&quot;MSIE&quot;</span>) &gt;= <span class="hljs-number">1</span>) {
+                    obj.select();
+                    <span class="hljs-keyword">return</span> <span class="hljs-built_in">document</span>.selection.createRange().text;
+                }
+
+                <span class="hljs-comment">//&#x517C;&#x5BB9;chrome&#x3001;&#x706B;&#x72D0;&#x7B49;&#xFF0C;HTML5&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</span>
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> FileReader != <span class="hljs-string">&quot;undefined&quot;</span>) {
+                    <span class="hljs-keyword">var</span> reader = <span class="hljs-keyword">new</span> FileReader();
+                    reader.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+                        <span class="hljs-built_in">document</span>.getElementById(imgId).src = e.target.result + <span class="hljs-string">&quot;&quot;</span>;
+                    }
+                    reader.readAsDataURL(obj.files[<span class="hljs-number">0</span>]);
+                } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (browserVersion.indexOf(<span class="hljs-string">&quot;SAFARI&quot;</span>) &gt; <span class="hljs-number">-1</span>) {
+                    alert(<span class="hljs-string">&quot;&#x6682;&#x65F6;&#x4E0D;&#x652F;&#x6301;Safari&#x6D4F;&#x89C8;&#x5668;!&quot;</span>);
+                }
+
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showPic</span>(<span class="hljs-params">obj, imgId</span>) </span>{
+            <span class="hljs-keyword">var</span> fullPath = getFullPathDevice(obj, imgId);
+            <span class="hljs-keyword">if</span> (fullPath) {
+                <span class="hljs-built_in">document</span>.getElementById(imgId).src = fullPath + <span class="hljs-string">&quot;&quot;</span>;
+            }
+        }
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shiling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 三、前端开发常用拾零">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.简单的图片上传预览","level":"1.4.1","depth":2,"previous":{"title":"三、前端开发常用拾零","level":"1.4","depth":1,"path":"git/shiling.md","ref":"./git/shiling.md","articles":[{"title":"1.简单的图片上传预览","level":"1.4.1","depth":2,"path":"git/imgUpload.md","ref":"./git/imgUpload.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"git/imgUpload.md","mtime":"2017-06-05T07:37:32.117Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-05T08:15:17.344Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
