@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [一、Javascripts学习](./git/learnJavascripts.md)
+* [一、Javascript](./git/learnJavascripts.md)
   - [javascript基础知识](./git/basicKnowledge.md)
   
 * [二、bootstrap常用](./git/bootstrap.md)
