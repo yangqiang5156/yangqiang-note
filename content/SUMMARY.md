@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [介绍](README.md)
 * [一、Javascript](./git/learnJavascripts.md)
   - [javascript基础知识](./git/basicKnowledge.md)
   
