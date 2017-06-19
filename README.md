@@ -12,6 +12,8 @@ gitbook serve
 
 ```bash
 项目中添加了npm scripts
+运行项目
+npm start
 发布项目可通过下面命令
 npm run build
 npm run deploy
